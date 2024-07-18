@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP and Location Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IP and Location Information</h1>
+        <button id="getIpAndLocationBtn" class="btn btn-primary">Get My IPv4 Address and Location</button>
+        
+        <!-- Modal for entering username -->
+        <div class="modal fade" id="usernameModal" tabindex="-1" role="dialog" aria-labelledby="usernameModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="usernameModalLabel">Enter Your Name</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="usernameInput" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="saveUsernameBtn">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information display -->
+        <div id="info" class="table-container">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>IPv4 Address</th>
+                        <td id="ipAddress">-</td>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <td id="location">-</td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <td id="username">-</td>
+                    </tr>
+                    <tr>
+                        <th>Platform</th>
+                        <td id="platform">-</td>
+                    </tr>
+                    <tr>
+                        <th>User Agent</th>
+                        <td id="userAgent">-</td>
+                    </tr>
+                    <tr>
+                        <th>Language</th>
+                        <td id="language">-</td>
+                    </tr>
+                    <tr>
+                        <th>Cookies Enabled</th>
+                        <td id="cookiesEnabled">-</td>
+                    </tr>
+                    <tr>
+                        <th>Screen Width</th>
+                        <td id="screenWidth">-</td>
+                    </tr>
+                    <tr>
+                        <th>Screen Height</th>
+                        <td id="screenHeight">-</td>
+                    </tr>
+                    <tr>
+                        <th>Color Depth</th>
+                        <td id="colorDepth">-</td>
+                    </tr>
+                    <tr>
+                        <th>Device Memory</th>
+                        <td id="deviceMemory">-</td>
+                    </tr>
+                    <tr>
+                        <th>Hardware Concurrency</th>
+                        <td id="hardwareConcurrency">-</td>
+                    </tr>
+                    <tr>
+                        <th>Battery Level</th>
+                        <td id="batteryLevel">-</td>
+                    </tr>
+                    <tr>
+                        <th>Plugins</th>
+                        <td id="plugins">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
